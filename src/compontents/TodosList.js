@@ -1,11 +1,11 @@
 import React from 'react'
 import TodoItem from './TodoItem'
 
-const TodosList = ({ todosProps, handleChange }) => {
+const TodosList = ({ todosProps, handleChange, delTodo, setUpdate }) => {
         return (
           <ul>
             {todosProps.map((todo) => (
-              <TodoItem key={todo.id} itemProp={todo} handleChange={handleChange}
+              <TodoItem key={todo.id} itemProp={todo} handleChange={handleChange} detTodo={delTodo} setUpdate={setUpdate}
               />
             ))}
           </ul>
