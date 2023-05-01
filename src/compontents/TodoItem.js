@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../styles/TodoItem.module.css'
 
-const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
+const TodoItem = ({ itemProp, handleChange, setUpdate, delTodo }) => {
     const [editing, setEditing] = useState(false);
     const handleEditing = () => {
         setEditing(true);
@@ -13,7 +13,7 @@ const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
       } else {
         editMode.display = 'none';
       }
-      
+
       const handleUpdatedDone = (event) => {
         if (event.key === 'Enter') {
           setEditing(false);
