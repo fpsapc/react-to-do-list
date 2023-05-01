@@ -5,7 +5,7 @@ const TodosList = ({ todosProps, handleChange, delTodo, setUpdate }) => {
         return (
           <ul>
             {todosProps.map((todo) => (
-              <TodoItem key={todo.id} itemProp={todo} handleChange={handleChange} detTodo={delTodo} setUpdate={setUpdate}
+              <TodoItem key={todo.id} itemProp={todo} handleChange={handleChange} delTodo={delTodo} setUpdate={setUpdate}
               />
             ))}
           </ul>
