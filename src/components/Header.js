@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from '../styles/Header.module.css';
 
-const Header = () => {
+// eslint-disable-next-line react/prop-types
+const Header = ({ children }) => {
   const headerStyle = {
     padding: '20px 0',
     lineHeight: '1.5em',
@@ -10,8 +11,7 @@ const Header = () => {
   };
   return (
     <header style={headerStyle} className={styles.header}>
-      <h1>todos</h1>
-      <p>items will be persists in browers&apos;s local storage</p>
+      {children}
     </header>
   );
 };

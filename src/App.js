@@ -6,8 +6,8 @@ import Login from './Routes/Login';
 import Profile from './Routes/Profile';
 import NotMatch from './Routes/NotMatch';
 import SinglePage from './Routes/SinglePage';
-import Layout from './compontents/Layout';
-import ProtectedRoute from './compontents/ProtectedRoute';
+import Layout from './components/Layout';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-import Header from '../compontents/Header';
+import Header from '../components/Header';
 import { useAuthContext } from '../Context/AuthContext';
 import styles from '../styles/Profile.module.css';
 

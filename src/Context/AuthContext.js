@@ -1,10 +1,14 @@
 import {
-  useState, useContext, createContext, useEffect,
+  useState,
+  useContext,
+  createContext,
+  useEffect,
 } from 'react';
 
 const AuthContext = createContext(null);
 
-export const AuthProvider = () => {
+// eslint-disable-next-line react/prop-types
+export const AuthProvider = ({ children }) => {
   function getUsername() {
     // getting stored state
     const temp = localStorage.getItem('username');
@@ -24,7 +28,7 @@ export const AuthProvider = () => {
 
   return (
     <AuthContext.Provider value={{ user, login, logout }}>
-      {}
+      {children}
     </AuthContext.Provider>
   );
 };

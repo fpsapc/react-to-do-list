@@ -1,22 +1,22 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import Header from '../components/Header';
 
-const About = () => {
-  const about = 'About developer';
-  return (
-    <>
+const About = () => (
+  <>
+    <Header>
       <h1>About page.</h1>
-      <div className="about">
-        <ul className="about_list">
-          <li>
-            <NavLink to="about-app">About app</NavLink>
-          </li>
-          <li>
-            <NavLink to="about-developer">{about}</NavLink>
-          </li>
-        </ul>
-        <Outlet />
-      </div>
-    </>
-  );
-};
+    </Header>
+    <div className="about">
+      <ul className="about_list">
+        <li>
+          <NavLink to="about-app">About app</NavLink>
+        </li>
+        <li>
+          <NavLink to="about-developer">About developer</NavLink>
+        </li>
+      </ul>
+      <Outlet />
+    </div>
+  </>
+);
 export default About;

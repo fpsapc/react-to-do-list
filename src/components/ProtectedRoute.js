@@ -2,7 +2,8 @@ import { Navigate, useLocation } from 'react-router-dom';
 
 import { useAuthContext } from '../Context/AuthContext';
 
-const ProtectedRoute = () => {
+// eslint-disable-next-line react/prop-types
+const ProtectedRoute = ({ children }) => {
   const { user } = useAuthContext();
   const location = useLocation();
 
@@ -15,7 +16,7 @@ const ProtectedRoute = () => {
       />
     );
   }
-  return 0;
+  return children;
 };
 
 export default ProtectedRoute;

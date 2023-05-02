@@ -1,12 +1,16 @@
 import {
-  useState, useEffect, createContext, useContext,
+  useState,
+  useEffect,
+  createContext,
+  useContext,
 } from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
 const TodosContext = createContext(null);
 
-export const TodosProvider = () => {
+// eslint-disable-next-line react/prop-types
+export const TodosProvider = ({ children }) => {
   function getInitialTodos() {
     // getting stored items
     const temp = localStorage.getItem('todos');
@@ -69,7 +73,7 @@ export const TodosProvider = () => {
         setUpdate,
       }}
     >
-      {}
+      {children}
     </TodosContext.Provider>
   );
 };

@@ -1,7 +1,7 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -11,56 +11,6 @@ body {
   background: #fff;
   height: 100vh;
   font-weight: 400;
-}
-
-nav {
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  padding: 2rem;
-}
-
-nav ul {
-  display: flex;
-}
-
-nav ul li {
-  list-style: none;
-  margin: 0 31px 0 0;
-  cursor: pointer;
-}
-
-.dropdown {
-  display: flex;
-  flex-direction: column;
-}
-
-.dropdown li {
-  margin: 0;
-}
-
-a {
-  color: #333;
-  text-decoration: none;
-}
-
-/* Active route */
-.active {
-  color: #005bb3;
-}
-
-.modal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.modalContent {
-  background-color: gray;
-  height: 10rem;
-  width: 20rem;
-  align-items: center;
 }
 
 .wrapper {
@@ -117,10 +67,17 @@ a {
   display: block;
 }
 
-.list-items {
-  list-style: none;
+a {
+  color: #333;
+  text-decoration: none;
 }
 
+/* Active route */
+.active {
+  color: #8a4baf;
+}
+
+/* About route  */
 .about {
   max-width: 1000px;
   margin: 0 auto;
@@ -135,6 +92,12 @@ a {
   display: inline-block;
   text-decoration: none;
   font-weight: bold;
+}
+
+.menu-nav li a,
+.menu-nav li span {
+  display: block;
+  padding: 1rem;
 }
 
 .about_list a:hover {
@@ -153,4 +116,80 @@ a {
 
 .main_content p {
   line-height: 25px;
+}
+
+/* Sidebar navigation */
+
+.navbar {
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+.navbar .toggle {
+  position: fixed;
+  left: 30px;
+  top: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.menu-nav {
+  list-style: none;
+  position: absolute;
+  background: #fff;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  max-width: 290px;
+  z-index: 9;
+  font-size: 18px;
+  box-shadow:
+    0 10px 15px -3px rgb(46 41 51 / 8%),
+    0 4px 6px -2px rgb(71 63 79 / 16%);
+  transform: translateX(-100px);
+  transition: transform ease-in-out 0.2s;
+
+  /* transition: width ease 0.2s; */
+}
+
+.menu-nav.show-menu {
+  width: 100%;
+  transform: translateX(0);
+}
+
+.log-in {
+  color: #777;
+  border-top: 1px solid #efecec;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+/* logout */
+.logout {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  display: flex;
+  gap: 2rem;
+  font-size: 20px;
+  color: #8a4baf;
+}
+
+/* Media Queries */
+@media screen and (min-width: 480px) {
+  div.wrapper h1 {
+    font-size: 6rem;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
 }
