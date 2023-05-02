@@ -27,7 +27,7 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ(#faq)
+- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -56,7 +56,7 @@ CSS
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://localhost:8080/">Dev Server</a></li>
+    <li><a href="https://localhost:3000/">Dev Server</a></li>
   </ul>
 </details>
 
@@ -74,6 +74,17 @@ CSS
 - **[User can add a task]**
 - **[User can delete a task]**
 - **[User can edit a task]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [To-do-list](#)
+
+- <p>Mobile Version:</p>
+<img src="./Assets/mobile.gif" alt="mobile live"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
