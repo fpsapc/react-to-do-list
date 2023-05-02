@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useOnClickOutside } from './useOnClickOutside';
+import useOnClickOutside from './useOnClickOutside';
 
 const links = [
   { path: '/', text: 'Home' },

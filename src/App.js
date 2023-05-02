@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Home from '../src/Routes/Home';
-import About from '../src/Routes/About';
-import Login from '../src/Routes/Login';
-import Profile from '../src/Routes/Profile';
-import NotMatch from '../src/Routes/NotMatch';
-import SinglePage from '../src/Routes/SinglePage';
+import Home from './Routes/Home';
+import About from './Routes/About';
+import Login from './Routes/Login';
+import Profile from './Routes/Profile';
+import NotMatch from './Routes/NotMatch';
+import SinglePage from './Routes/SinglePage';
 import Layout from './compontents/Layout';
 import ProtectedRoute from './compontents/ProtectedRoute';
 
@@ -20,11 +20,11 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route
           path="profile"
-          element={
+          element={(
             <ProtectedRoute>
               <Profile />
             </ProtectedRoute>
-          }
+          )}
         />
         <Route path="*" element={<NotMatch />} />
       </Route>
